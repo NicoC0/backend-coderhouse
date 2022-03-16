@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Goma",
+		"price": 100,
+		"thumbnail": "goma.png",
+		"id": 1
+	},
+	{
+		"title": "Lápiz",
+		"price": 50,
+		"thumbnail": "lapiz.png",
+		"id": 2
+	},
+	{
+		"title": "Cartuchera",
+		"price": 200,
+		"thumbnail": "cartuchera.png",
+		"id": 3
+	}
+]
