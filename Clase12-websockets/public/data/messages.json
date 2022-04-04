@@ -1,0 +1,20 @@
+[
+  {
+    "email": "nicoconfaa@gmail.com",
+    "date": "4/4/2022 18:27:18",
+    "text": "Hola, probando.",
+    "id": 1
+  },
+  {
+    "email": "admin@admin.com",
+    "date": "4/4/2022 18:51:35",
+    "text": "Hola, funciona todo ok.",
+    "id": 2
+  },
+  {
+    "email": "hola@gmail.com",
+    "date": "4/4/2022 19:15:23",
+    "text": "Hola",
+    "id": 3
+  }
+]

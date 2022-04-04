@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Escuadra",
+    "price": 234.78,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 456.32,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    "id": 2
+  },
+  {
+    "title": "Agenda",
+    "price": 127.54,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png",
+    "id": 4
+  },
+  {
+    "title": "Lapiz",
+    "price": "40",
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/pencil-512.png",
+    "id": 5
+  },
+  {
+    "title": "Goma de borrar",
+    "price": "60.50",
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/office-icons-17/512/ilustracoes_04-08-512.png",
+    "id": 6
+  }
+]
