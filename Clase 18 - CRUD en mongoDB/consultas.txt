@@ -1,0 +1,53 @@
+use ecommerce
+
+db.createCollection('mensajes')
+db.createCollection('productos')
+
+// ============ PUNTO 1 Y 2
+
+db.productos.insertMany([{id: 1, title: 'Titulo 1', thumbnail: 'https://google.com/', price: 1000}, {id: 2, title: 'Titulo 2', thumbnail: 'https://google.com/', price: 780}, {id: 3, title: 'Titulo 3', thumbnail: 'https://google.com/', price: 3000}, {id: 4, title: 'Titulo 4', thumbnail: 'https://google.com/', price: 2321}, {id: 5, title: 'Titulo 5', thumbnail: 'https://google.com/', price: 1345}, {id: 6, title: 'Titulo 6', thumbnail: 'https://google.com/', price: 200}, {id: 7, title: 'Titulo 7', thumbnail: 'https://google.com/', price: 3421}, {id: 8, title: 'Titulo 8', thumbnail: 'https://google.com/', price: 340}, {id: 9, title: 'Titulo 9', thumbnail: 'https://google.com/', price: 370}, {id: 10, title: 'Titulo 10', thumbnail: 'https://google.com/', price: 4990}])
+
+db.mensajes.insertMany([{id: 1, email: 'nico@nico.com', texto: 'hola probando', time: '02/04/2022'}, {id: 2, email: 'roci@roci.com', texto: 'holaa te leo', time: '02/04/2022'}, {id: 3, email: 'nico@nico.com', texto: 'geniaaal', time: '02/04/2022'}, {id: 4, email: 'roci@roci.com', texto: 'me gustan los colores', time: '02/04/2022'}, {id: 5, email: 'nico@nico.com', texto: 'estan buenos', time: '02/04/2022'}, {id: 6, email: 'roci@roci.com', texto: 'faltan productos', time: '02/04/2022'}, {id: 7, email: 'nico@nico.com', texto: 'de a poco se agrega', time: '02/04/2022'}, {id: 8, email: 'roci@roci.com', texto: 'apuratee', time: '02/04/2022'}, {id: 9, email: 'nico@nico.com', texto: 'shhh', time: '02/04/2022'}, {id: 10, email: 'roci@roci.com', texto: 'jajajaj', time: '02/04/2022'}])
+
+// ============ PUNTO 3
+
+db.productos.find()
+db.mensajes.find()
+
+// ============ PUNTO 4
+
+db.productos.estimatedDocumentCount()
+db.mensajes.estimatedDocumentCount()
+
+
+// ============ PUNTO 5
+A) db.productos.insertOne({id: 11, title: 'Title 11', thumbnail: 'https://google.com/', price: 120})
+
+B) 
+  i) db.productos.find({price:{$lt: 1000}})
+ ii) db.productos.find({price:{$gte: 1000, $lte:3000}})
+iii) db.productos.find({price:{$gt: 3000}})
+ iv) db.productos.find().skip(2).limit(1).sort({price:1});
+
+C) db.productos.updateMany({}, {$set:{stock: 100}})
+
+D) db.productos.updateMany({price:{$gt: 4000}}, {$set: {stock: 0}})
+
+
+
+E) db.productos.deleteMany({price:{$lt: 1000}})
+
+
+// ============ PUNTO 6
+
+use admin
+
+db.createUser({
+    user:"pepe",
+    pwd:"asd456",
+    roles:[{role:"read", db:"ecommerce"}]
+})
+
+
+// VERIFICACION PERMISOS SOLO LECTURA
+Me daba error los comandos de la diapositiva, lo que hice fue usar studio 3T y entrar a la base de datos admin y revisar los usuarios, allí marcaba el usuario pepe con contraseña asd456 y permisos "Read" 
