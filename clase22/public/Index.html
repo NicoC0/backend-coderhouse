@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap Jumbotron CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Clase 22</title>
+    <!-- Socket.io CLIENTE -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- CDN Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+</head>
+<body class="p-5">
+    <div class="container">
+        <div class="jumbotron">
+            <!-- Vista de los Productos -->
+            <h2 style="color:blue">Vista de Productos</h2>
+            <br>
+            <div id="tableProducts"></div>
+        </div>
+        <!-- Centro de Mensajes -->
+        <form id="Chat" onsubmit="SendMesage(); return false;" class="border border-primary p-3 mb-3 rounded jumbotron">
+            <h2 style="color: blue;">Centro de Mensajes (Compresión: <span id="compresion-info"></span>%)</h2>
+            <h3>Autor</h3>
+            <div class="mb-3 col-5">
+                <input type="email" id="mail" name="mail" class="form-control" placeholder="Tu email" />
+            </div>
+            <div class="mb-3 col-5">
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="nombre" />
+            </div>
+            <div class="mb-3 col-5">
+                <input type="text" id="apellido" name="apellido" class="form-control" placeholder="apellido" />
+            </div>
+            <div class="mb-3 col-2">
+                <input type="text" id="edad" name="edad" class="form-control" placeholder="edad" />
+            </div>
+            <div class="mb-3 col-4">
+                <input type="text" id="alias" name="alias" class="form-control" placeholder="alias" />
+            </div>
+            <div class="mb-3 col-5">
+                <input type="text" id="avatar" name="avatar" class="form-control" placeholder="avatar" />
+            </div>
+            <h3>Conversacion:</h3>
+            <div class="mb-3">
+                <div id="tableMessages"></div>
+            </div>
+            <h3>Mensaje:</h3>
+            <div class="row g-3 mb-3">
+                <div class="col-10">
+                    <input type="text" id="mensaje" name="mensaje" class="form-control" />
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+            <div class="mb-3">
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
