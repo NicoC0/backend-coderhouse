@@ -29,7 +29,7 @@ app.use(express.json())
 app.use(express.urlencoded({
 	extended: true
 }))
-// Espacio público del servidor
+// Espacio público del servidor 
 app.use(express.static("public"))
 
 // Motor de plantillas 
