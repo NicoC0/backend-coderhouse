@@ -1,0 +1,18 @@
+function webAuth(req, res, next) {
+    console.log(req.session)
+    console.log(req.session.nombre)
+    if (req.session?.nombre) {
+        next()
+    } else {
+        res.redirect('/login')
+    }
+}
+function usersAuth(req, res, next) {
+    if (req.session?.nombre) {
+        next()
+    } else {
+        res.status(401).json({ Error: 'Usuario no autorizado!' })
+    }
+}
+
+module.exports = { webAuth, usersAuth }
